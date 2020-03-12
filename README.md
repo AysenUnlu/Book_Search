@@ -18,7 +18,7 @@
 
 ## Usage: ##
 
-  ![Employee List Demo](public/BookSearch.gif)
+  ![Book Search](client/public/BookSearch.gif)
     
 ## How: ##
 ### Client Side: ###
@@ -31,15 +31,15 @@
 
  - pages/Search: Encapsulates `Container`, `Row`, `Jumbotron`, `Col` components for display purposes which are imported from `Grid`, `Input` and `FormBtn` components for querying books to which proper states and functions are passed as props. Also encapsulates `List`, `ListItem`, `Book`,`SaveBtn` and `ViewButton` components to display the search results by passing props. This functional component keeps track of states such as `search` and `books` by using hooks and defines following functions: `handleInputChange` function that's passed to the `Input` component that sets the search state with user input, `handleFormSubmit` function which is passed to the `FormBtn` component that makes an api call and sets the `books` state, `saveBook` function which is passed to the `SaveBtn` component so title, authors, description, image, link fields can be parsed from the data about specified book and passed with the proper API call to the server, `viewBook` function that's passed to the `viewBtn` component so a new tab will open which brings the user to the google book page.
 
- -pages/Saved: Encapsulates `Container`, `Row`, `Jumbotron`, `Col` components for display purposes which are imported from `Grid`, `List`, `ListItem`, `Book`,`DeleteBtn` and `ViewButton` components to display the saved books or delete them by passing props to the lower order components. It keeps track of the "books" state which holds the saved books that's returned from the server. When the page mounts, uses hooks to make the API calls to the server to get the saved books from the database and set the `books` state. It also includes `deleteBook` function which it passes to the "DeleteBtn" component with the id of the specified book; and `viewBook` function which it passes to `ViewBtn` component with the specified book's link.
+ - pages/Saved: Encapsulates `Container`, `Row`, `Jumbotron`, `Col` components for display purposes which are imported from `Grid`, `List`, `ListItem`, `Book`,`DeleteBtn` and `ViewButton` components to display the saved books or delete them by passing props to the lower order components. It keeps track of the "books" state which holds the saved books that's returned from the server. When the page mounts, uses hooks to make the API calls to the server to get the saved books from the database and set the `books` state. It also includes `deleteBook` function which it passes to the "DeleteBtn" component with the id of the specified book; and `viewBook` function which it passes to `ViewBtn` component with the specified book's link.
 
- -pages/NoMatch: Encapsulates `Container`, `Row`, `Jumbotron`, `Col` components for display purposes which are imported from `Grid`. Displays `404 Not Found` message when the user tries to navigate to paths other than `/`,`/search` and `/saved`.
+ - pages/NoMatch: Encapsulates `Container`, `Row`, `Jumbotron`, `Col` components for display purposes which are imported from `Grid`. Displays `404 Not Found` message when the user tries to navigate to paths other than `/`,`/search` and `/saved`.
 
  - The function of ViewBtn, SaveBtn, DeleteBtn; Input components, FormBtn component under Form; List, ListItem components under List, components for display purposes under Grid are mentioned above.
 
  - components/Nav: This Functional component displays the navigation bar where there are tabs for saved and search pages and the name of the application
 
- -components/Book: this functional component displays title, author(s), image and description of a book. 
+ - components/Book: this functional component displays title, author(s), image and description of a book. 
 
  ### Server Side: ###
 
