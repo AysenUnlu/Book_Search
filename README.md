@@ -9,7 +9,7 @@
 
   * The application is deployed using Heroku: 
 
-  * Running aplication can be reached at 
+  * Running aplication can be reached at  https://protected-journey-69487.herokuapp.com
 
   # Setup for Local Machine
 
